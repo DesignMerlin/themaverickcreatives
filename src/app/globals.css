@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+:root {
+  --background: #171717;
+  --foreground: #ffffff;
+
+  --color-warm-900: #171717;
+  --color-warm-800: #2b2b2b;
+  --color-warm-300: #d6d6d6;
+  --color-warm-50: #fafafa;
+
+  --color-text-white: #ffffff;
+  --color-text-caption: #a6a6a6;
+  --color-text-disable: #d6d6d6;
+  --color-text-body: #757575;
+
+  --color-purple-500: #8800ff;
+  --color-purple-900: #39006b;
+  --color-purple-50: #f3e6ff;
+
+  --font-heading: var(--font-instrument-serif), serif;
+  --font-body: var(--font-inter), sans-serif;
+  --font-ui: var(--font-geist), sans-serif;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-warm-900: var(--color-warm-900);
+  --color-warm-800: var(--color-warm-800);
+  --color-warm-300: var(--color-warm-300);
+  --color-warm-50: var(--color-warm-50);
+
+  --color-text-white: var(--color-text-white);
+  --color-text-caption: var(--color-text-caption);
+  --color-text-disable: var(--color-text-disable);
+  --color-text-body: var(--color-text-body);
+
+  --color-purple-500: var(--color-purple-500);
+  --color-purple-900: var(--color-purple-900);
+  --color-purple-50: var(--color-purple-50);
+
+  --font-sans: var(--font-body);
+  --font-heading: var(--font-heading);
+  --font-ui: var(--font-ui);
+
+  --animate-marquee: marquee 40s linear infinite;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
