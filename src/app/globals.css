@@ -15,6 +15,7 @@
   --color-text-body: #757575;
 
   --color-purple-500: #8800ff;
+  --color-purple-400: #a033ff;
   --color-purple-900: #39006b;
   --color-purple-50: #f3e6ff;
 
@@ -38,6 +39,7 @@
   --color-text-body: var(--color-text-body);
 
   --color-purple-500: var(--color-purple-500);
+  --color-purple-400: var(--color-purple-400);
   --color-purple-900: var(--color-purple-900);
   --color-purple-50: var(--color-purple-50);
 
@@ -46,6 +48,9 @@
   --font-ui: var(--font-ui);
 
   --animate-marquee: marquee 40s linear infinite;
+  --animate-spin-slow: spin 12s linear infinite;
+  --animate-drift: drift 28s ease-in-out infinite;
+  --animate-caret: caret 1s step-end infinite;
 }
 
 body {
@@ -59,6 +64,34 @@ body {
   }
   to {
     transform: translateX(-50%);
+  }
+}
+
+/* Endless slow travel for the hero gradient. Stays scaled up throughout so the
+   image edges never enter the frame, keeping the colours exactly as designed. */
+@keyframes drift {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1.2);
+  }
+  33% {
+    transform: translate3d(-3.5%, -2%, 0) scale(1.28);
+  }
+  66% {
+    transform: translate3d(3%, 1.5%, 0) scale(1.24);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) scale(1.2);
+  }
+}
+
+@keyframes caret {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  50.1%,
+  100% {
+    opacity: 0;
   }
 }
 

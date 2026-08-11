@@ -77,7 +77,7 @@ export function OurServices() {
   const activeService = services[active];
 
   return (
-    <section className="mx-auto max-w-[1400px] px-6 py-20 sm:px-8 lg:py-28">
+    <section className="mx-auto w-full max-w-[1440px] px-6 py-20 sm:px-8 lg:px-20 lg:py-28">
       <Reveal className="mx-auto mb-16 max-w-[992px] text-center">
         <h2 className="font-heading text-4xl tracking-tight text-white sm:text-5xl lg:text-[64px]">
           We know our strengths and we build around them.
@@ -91,13 +91,15 @@ export function OurServices() {
 
       <Reveal className="grid gap-6 lg:grid-cols-2 lg:items-start">
         <div className="relative order-1 h-[280px] overflow-hidden rounded-2xl sm:h-[380px] lg:order-2 lg:h-[601px]">
-          <AnimatePresence mode="wait">
+          {/* Crossfade rather than wait-then-fade, so the next image is already
+              on screen instead of leaving a gap between services. */}
+          <AnimatePresence>
             <motion.div
               key={activeService.title}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              transition={{ duration: 0.4 }}
+              transition={{ duration: 0.28, ease: [0.16, 1, 0.3, 1] }}
               className="absolute inset-0"
             >
               <Image

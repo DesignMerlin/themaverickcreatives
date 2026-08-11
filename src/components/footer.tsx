@@ -1,5 +1,7 @@
 import Image from "next/image";
+import Link from "next/link";
 import { PillButton } from "@/components/ui/pill-button";
+import { Reveal } from "@/components/ui/reveal";
 
 const socials: { href: string; icon: string; fg?: string; alt: string }[] = [
   { href: "#", icon: "/images/icon-fb.svg", alt: "Facebook" },
@@ -21,7 +23,7 @@ export function Footer() {
         />
       </div>
 
-      <div className="relative flex w-full max-w-[1216px] flex-col items-center gap-8">
+      <Reveal className="relative flex w-full max-w-[1216px] flex-col items-center gap-8">
         <div className="flex flex-col items-center gap-3">
           <a
             href="mailto:themaverickcreatives@gmail.com"
@@ -65,15 +67,15 @@ export function Footer() {
         <div className="flex w-full flex-col gap-8">
           <div className="h-px w-full bg-[#e4e7ec]" />
           <div className="flex items-center justify-center gap-8 text-base text-text-caption">
-            <a href="#" className="hover:text-white">
+            <Link href="/terms" className="transition-colors duration-300 hover:text-white">
               Terms of Service
-            </a>
-            <a href="#" className="hover:text-white">
+            </Link>
+            <Link href="/privacy" className="transition-colors duration-300 hover:text-white">
               Privacy Policy
-            </a>
+            </Link>
           </div>
         </div>
-      </div>
+      </Reveal>
 
       <p
         aria-hidden

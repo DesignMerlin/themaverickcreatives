@@ -34,7 +34,7 @@ const projects = [
 
 export function WorksGallery() {
   return (
-    <section className="mx-auto max-w-[1280px] px-6 py-20 sm:px-8 lg:py-28">
+    <section className="mx-auto w-full max-w-[1440px] px-6 py-20 sm:px-8 lg:px-20 lg:py-28">
       <Reveal className="mx-auto mb-16 max-w-[992px] text-center">
         <h2 className="font-heading text-4xl tracking-tight text-white sm:text-5xl lg:text-[64px]">
           Take a look at some of our best works
@@ -59,7 +59,7 @@ export function WorksGallery() {
       </div>
 
       <Reveal className="mt-16 flex justify-center">
-        <PillButton href="#" variant="outline-dark" className="w-full max-w-[425px] py-4 text-base">
+        <PillButton href="/portfolio" variant="outline-dark" className="w-full max-w-[425px] py-4 text-base">
           View All
         </PillButton>
       </Reveal>
