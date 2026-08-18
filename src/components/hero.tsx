@@ -4,7 +4,6 @@ import { useState } from "react";
 import { Phone, Eye } from "lucide-react";
 import { motion } from "motion/react";
 import { PillButton } from "@/components/ui/pill-button";
-import { SiteNav } from "@/components/site-nav";
 import { Typewriter } from "@/components/ui/typewriter";
 
 const HEADING = "We transform imagination into measurable progress";
@@ -17,9 +16,7 @@ export function Hero() {
 
   return (
     <section className="relative">
-      <div className="mx-auto flex max-w-[1320px] flex-col gap-16 px-4 pt-6 sm:px-6 lg:gap-24 lg:pt-[52px]">
-        <SiteNav />
-
+      <div className="mx-auto flex max-w-[1320px] flex-col px-4 pt-16 sm:px-6 lg:pt-24">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}

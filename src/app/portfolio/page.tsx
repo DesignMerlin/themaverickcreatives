@@ -13,9 +13,7 @@ export const metadata: Metadata = {
 export default function PortfolioPage() {
   return (
     <main className="flex flex-1 flex-col overflow-x-clip">
-      <div className="px-4 pt-6 sm:px-6 lg:pt-[52px]">
-        <SiteNav active="Portfolios" />
-      </div>
+      <SiteNav active="Portfolios" />
       <PortfolioHeader />
       <PortfolioGrid />
       <Footer />

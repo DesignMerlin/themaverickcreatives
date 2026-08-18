@@ -19,9 +19,7 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <main className="flex flex-1 flex-col overflow-x-clip">
-      <div className="px-4 pt-6 sm:px-6 lg:pt-[52px]">
-        <SiteNav active="About" />
-      </div>
+      <SiteNav active="About" />
 
       <ScrollHighlightText text={INTRO} accent={INTRO_ACCENT} />
 

@@ -37,9 +37,7 @@ export default async function ProjectPage({
 
   return (
     <main className="flex flex-1 flex-col overflow-x-clip">
-      <div className="px-4 pt-6 sm:px-6 lg:pt-[52px]">
-        <SiteNav active="Portfolios" />
-      </div>
+      <SiteNav active="Portfolios" />
 
       <div className="mx-auto w-full max-w-[1440px] px-6 pt-8 sm:px-8 lg:px-[120px] lg:pt-12">
         <Breadcrumbs current={project.title} />
