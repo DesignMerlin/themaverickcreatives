@@ -71,7 +71,7 @@ export function SiteNav({ active }: { active?: string }) {
         <div className="flex items-center justify-between gap-4 px-4 py-2.5 sm:px-6 lg:h-20 lg:py-0">
           <Link href="/" className="flex shrink-0 items-center gap-2" onClick={() => setOpen(false)}>
             <span className="relative size-9 shrink-0 sm:size-10">
-              <Image src="/images/logo-mark.png" alt="" fill sizes="40px" className="object-contain" />
+              <Image src="/images/logo-mark-v2.png" alt="" fill sizes="40px" className="object-contain" />
             </span>
             <span className="hidden font-ui text-sm leading-tight font-semibold text-white sm:block">
               Maverick

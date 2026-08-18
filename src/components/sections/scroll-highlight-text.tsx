@@ -65,9 +65,9 @@ export function ScrollHighlightText({
   const accentWords = accent ? accent.split(" ") : [];
   const all = [...words, ...accentWords];
 
-  // Finish the fill well before the pin releases, so the paragraph sits fully
-  // lit — every word the same white — for a beat before the page moves on.
-  const span = 0.75;
+  // Finish the fill just before the pin releases: enough of a beat for the
+  // paragraph to read as fully lit, without holding a finished screen.
+  const span = 0.88;
 
   return (
     // Pulled up behind the nav so the pin begins at the very top of the page.
@@ -76,11 +76,12 @@ export function ScrollHighlightText({
     // exactly that same distance — so the section releases as the last word
     // lights instead of holding a finished paragraph for another screenful.
     <div ref={container} className="relative -mt-[var(--nav-offset)] h-[180vh]">
-      {/* On phones the paragraph sits just under the nav rather than centred,
-          which otherwise left a large empty band above it. */}
-      <div className="sticky top-0 flex min-h-screen items-start pt-[calc(var(--nav-offset)+32px)] pb-14 lg:items-center lg:pt-0 lg:pb-0">
+      {/* Content-height rather than full-screen, so the gap to the image below
+          is the 96px of padding and nothing more. The type is sized to fill the
+          space under the nav, which keeps that promise without leaving a void. */}
+      <div className="sticky top-0 flex items-start pt-[calc(var(--nav-offset)+32px)] pb-24">
         <div className="mx-auto w-full max-w-[1440px] px-6 sm:px-8 lg:px-[120px]">
-          <p className="flex flex-wrap font-heading text-3xl leading-none tracking-[-1.28px] sm:text-5xl lg:text-[64px]">
+          <p className="flex flex-wrap font-heading text-[clamp(30px,calc(3.4vh+12.5px),46px)] leading-none tracking-[-1.28px] sm:text-[clamp(44px,calc(5.2vh+16px),80px)] lg:text-[clamp(56px,calc(7.1vh+14.6px),100px)]">
             {all.map((word, i) => (
               <Word
                 key={i}

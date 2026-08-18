@@ -9,12 +9,14 @@ type Member = {
   height?: string;
   left?: string;
   top?: string;
+  /** Anchor for uncropped portraits. Defaults to the bottom, as the design does. */
+  objectPosition?: string;
 };
 
 const team: Member[] = [
   { name: "Peace Adesola", role: "Founder & CEO", src: "/images/team/m1.jpg", height: "130.81%", left: "-0.15%", top: "-0.14%" },
   { name: "Funso Ayodele", role: "Chief Operating Officer", src: "/images/team/m2.jpg", width: "103.06%", height: "134.54%", left: "1.16%", top: "-19.92%" },
-  { name: "Oluwaseun Hassan", role: "Finance Manager", src: "/images/team/m3.png" },
+  { name: "Oluwaseun Hassan", role: "Finance Manager", src: "/images/team/m3.jpg", objectPosition: "top" },
   { name: "Samuel Ekwenze", role: "Training Manager", src: "/images/team/m4.jpg", height: "141.87%", left: "-0.11%", top: "-8.23%" },
   { name: "Biyayya Philemon", role: "Project Manager", src: "/images/team/m5.jpg", width: "114.52%", height: "151.71%", left: "-10.23%", top: "-18.96%" },
   { name: "Jumoke Adigun", role: "Community Manager", src: "/images/team/m6.jpg", width: "118.57%", height: "168.38%", left: "-15.32%", top: "-23.07%" },
@@ -39,7 +41,7 @@ function TeamMember({ member }: { member: Member }) {
             className={
               cropped
                 ? "absolute max-w-none object-cover"
-                : "absolute inset-0 size-full object-cover object-bottom"
+                : "absolute inset-0 size-full object-cover"
             }
             style={
               cropped
@@ -49,7 +51,7 @@ function TeamMember({ member }: { member: Member }) {
                     left: member.left,
                     top: member.top,
                   }
-                : undefined
+                : { objectPosition: member.objectPosition ?? "bottom" }
             }
           />
         </div>
