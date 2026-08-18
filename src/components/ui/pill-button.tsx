@@ -6,6 +6,8 @@ type PillButtonProps = {
   children: ReactNode;
   variant?: "filled" | "outline-dark" | "outline-light";
   showArrow?: boolean;
+  /** Opens the link in a new tab, severing the opener reference. */
+  external?: boolean;
   className?: string;
 };
 
@@ -23,11 +25,14 @@ export function PillButton({
   children,
   variant = "filled",
   showArrow = false,
+  external = false,
   className = "",
 }: PillButtonProps) {
   return (
     <Link
       href={href}
+      target={external ? "_blank" : undefined}
+      rel={external ? "noopener noreferrer" : undefined}
       className={`group inline-flex cursor-pointer items-center justify-center gap-2 rounded-full px-6 py-2.5 text-sm font-semibold transition-colors duration-300 ${variantClasses[variant]} ${className}`}
     >
       <span className="px-2">{children}</span>

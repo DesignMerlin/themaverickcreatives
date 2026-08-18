@@ -61,7 +61,13 @@ export function CommunityHero() {
               opportunities that accelerate their journey.
             </p>
           </div>
-          <PillButton href="#" variant="filled" showArrow className="h-12 text-base">
+          <PillButton
+            href="https://bit.ly/be-a-maverick"
+            variant="filled"
+            showArrow
+            external
+            className="h-12 text-base"
+          >
             Join the Tribe
           </PillButton>
         </motion.div>

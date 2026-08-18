@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { PillButton } from "@/components/ui/pill-button";
 import { Reveal } from "@/components/ui/reveal";
+import { EmailLink } from "@/components/ui/email-link";
 
 const socials: { href: string; icon: string; fg?: string; alt: string }[] = [
   { href: "#", icon: "/images/icon-fb.svg", alt: "Facebook" },
@@ -25,16 +26,11 @@ export function Footer() {
 
       <Reveal className="relative flex w-full max-w-[1216px] flex-col items-center gap-8">
         <div className="flex flex-col items-center gap-3">
-          <a
-            href="mailto:themaverickcreatives@gmail.com"
-            className="text-base text-white hover:text-text-caption"
-          >
-            themaverickcreatives@gmail.com
-          </a>
+          <EmailLink className="text-center text-base text-white" />
           <p className="text-center text-base text-white">
             9 Ayoka Street, opposite Justrite Supermarket, Bariga, Lagos.
           </p>
-          <p className="text-base text-white">
+          <p className="text-center text-base text-white">
             ©2026 Maverick Creatives. All Rights Reserved.
           </p>
           <div className="flex items-center gap-6">
