@@ -18,6 +18,9 @@
   --color-purple-400: #a033ff;
   --color-purple-900: #39006b;
   --color-purple-50: #f3e6ff;
+  --color-purple-200: #cc96fe;
+
+  --color-orange-500: #e88929;
 
   --font-heading: var(--font-instrument-serif), serif;
   --font-body: var(--font-inter), sans-serif;
@@ -42,6 +45,9 @@
   --color-purple-400: var(--color-purple-400);
   --color-purple-900: var(--color-purple-900);
   --color-purple-50: var(--color-purple-50);
+  --color-purple-200: var(--color-purple-200);
+
+  --color-orange-500: var(--color-orange-500);
 
   --font-sans: var(--font-body);
   --font-heading: var(--font-heading);
