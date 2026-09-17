@@ -102,7 +102,7 @@ export const projects: Project[] = [
     cardImage: "/images/portfolio-beyond-convention.jpg",
     description: SHARED_DESCRIPTION,
     tags: TAGS,
-    video: "/videos/highlight-4.mp4",
+    video: "/videos/beyond-convention-highlight.mp4",
     gallery: [
       { src: "/images/projects/beyond-convention/g1.jpg" },
       { src: "/images/projects/beyond-convention/g2.jpg", width: "116.42%", height: "136.18%", left: "-11.72%", top: "-26.59%" },
