@@ -62,7 +62,7 @@ export const projects: Project[] = [
     cardImage: "/images/portfolio-immigify.jpg",
     description: SHARED_DESCRIPTION,
     tags: TAGS,
-    video: "/videos/highlight-2.mp4",
+    video: "/videos/immigify-highlight.mp4",
     gallery: [
       { src: "/images/projects/immigify/g1.jpg" },
       { src: "/images/projects/immigify/g2.jpg" },

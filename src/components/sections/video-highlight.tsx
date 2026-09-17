@@ -34,7 +34,7 @@ export function VideoHighlight({ src, title }: { src: string; title: string }) {
           Video Highlight
         </h2>
 
-        <div className="relative mt-8 overflow-hidden rounded-[20px] p-2 sm:p-3 lg:mt-12 lg:p-5">
+        <div className="relative mt-8 overflow-hidden rounded-[20px] p-[5px] lg:mt-12">
           <div aria-hidden className="absolute inset-0" style={{ background: FLUID_GRADIENT }} />
           <div
             aria-hidden
@@ -42,7 +42,7 @@ export function VideoHighlight({ src, title }: { src: string; title: string }) {
             style={{ background: FLUID_GRADIENT_BLUE }}
           />
 
-          <div className="relative aspect-[1160/749] w-full overflow-hidden rounded-[10px] bg-black">
+          <div className="relative aspect-[1160/749] w-full overflow-hidden rounded-[15px] bg-black">
             <video
               ref={videoRef}
               src={src}
