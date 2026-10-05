@@ -23,7 +23,8 @@ export type Project = {
   cardImage: string;
   description: string;
   tags: string[];
-  video: string;
+  /** Omit when a project has no highlight reel — the Video Highlight section is then skipped. */
+  video?: string;
   gallery: GalleryCell[];
 };
 
@@ -42,7 +43,6 @@ export const projects: Project[] = [
     description:
       "Rewriting Limits was built from the ground up, with full creative and operational direction guiding every stage, from strategy to final execution. From shaping the vision and story to designing the event identity, visuals, and immersive environment, every detail was crafted to create a meaningful experience. At Maverick Creatives, ideas aren’t just executed, they’re transformed into impactful, living experiences.",
     tags: TAGS,
-    video: "/videos/highlight-1.mp4",
     gallery: [
       { src: "/images/projects/rewriting-limits/g1.jpg" },
       { src: "/images/projects/rewriting-limits/g2.jpg", width: "157.46%", left: "-30.7%", top: "0.02%" },
@@ -82,7 +82,6 @@ export const projects: Project[] = [
     cardImage: "/images/portfolio-tunes-thrills.jpg",
     description: SHARED_DESCRIPTION,
     tags: TAGS,
-    video: "/videos/highlight-3.mp4",
     gallery: [
       { src: "/images/projects/tunes-and-thrills/g1.jpg" },
       { src: "/images/projects/tunes-and-thrills/g2.jpg", width: "160.27%", left: "-11.49%", top: "4.03%" },

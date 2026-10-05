@@ -11,7 +11,7 @@ const navLinks = [
   { label: "About", href: "/about" },
   { label: "Portfolios", href: "/portfolio" },
   { label: "Community", href: "/community" },
-  { label: "Contact Us", href: "#" },
+  { label: "Contact Us", href: "/contact" },
 ];
 
 export function SiteNav({ active }: { active?: string }) {

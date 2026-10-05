@@ -66,9 +66,11 @@ export default async function ProjectPage({
         </Reveal>
       </section>
 
-      <div className="pt-20 lg:pt-[112px]">
-        <VideoHighlight src={project.video} title={project.title} />
-      </div>
+      {project.video && (
+        <div className="pt-20 lg:pt-[112px]">
+          <VideoHighlight src={project.video} title={project.title} />
+        </div>
+      )}
 
       <MediaGallery gallery={project.gallery} title={project.title} />
 

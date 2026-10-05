@@ -22,6 +22,12 @@
 
   --color-orange-500: #e88929;
 
+  /* Form validation states. The design only specifies the idle field, so these
+     are drawn from the brand gradient (the red is its #fd1d4f stop) and paired
+     with a green that stays legible on the warm-900 background. */
+  --color-danger-500: #fd1d4f;
+  --color-success-500: #35c77f;
+
   --font-heading: var(--font-instrument-serif), serif;
   --font-body: var(--font-inter), sans-serif;
   --font-ui: var(--font-geist), sans-serif;
@@ -64,6 +70,9 @@
   --color-purple-200: var(--color-purple-200);
 
   --color-orange-500: var(--color-orange-500);
+
+  --color-danger-500: var(--color-danger-500);
+  --color-success-500: var(--color-success-500);
 
   --font-sans: var(--font-body);
   --font-heading: var(--font-heading);
